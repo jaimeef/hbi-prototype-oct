@@ -351,10 +351,10 @@
             materialThree = modelViewer.model.getMaterialByName("Material.003");
             materialThree.setAlphaMode("BLEND");
             // Defaults to base colour
-            materialThree.pbrMetallicRoughness.setBaseColorFactor([0.6, 0.5, 1, 0.5]);
+            materialThree.pbrMetallicRoughness.setBaseColorFactor([0.8, 0.5, 1, 0.5]);
             // Adds slider interactivity
             document.querySelector('#alpha-three').addEventListener('input', (event) => {
-                materialThree.pbrMetallicRoughness.setBaseColorFactor([0.6, 0.5, 1, (event.target.value)]);
+                materialThree.pbrMetallicRoughness.setBaseColorFactor([0.8, 0.5, 1, (event.target.value)]);
             });
 
             console.log(modelViewer.model.materials);
@@ -362,10 +362,10 @@
             materialLabels = modelViewer.model.getMaterialByName("Text");
             materialLabels.setAlphaMode("BLEND");
             // Default to base colour
-            materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.15, 0, 0.8, 1]);
+             materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.10, 0, 0.8, 0.5]);
             // Adds slider interactivity
             document.querySelector('#alpha-four').addEventListener('input', (event) => {
-                materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.15, 0, 0.8, (event.target.value)]);
+                materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.10, 0, 0.8, (event.target.value)]);
 
             });
         })
