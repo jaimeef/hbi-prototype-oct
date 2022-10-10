@@ -122,7 +122,7 @@ h3 {
     color: white;
     font-weight: bold;
     font-size: 18px;
-    transition: 0.6s ease;
+/*    transition: 0.6s ease;*/
     user-select: none;
 }
 
@@ -181,6 +181,7 @@ h3 {
 }
 
 /* Fading animation */
+/*
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -195,3 +196,4 @@ h3 {
         opacity: 1
     }
 }
+*/
