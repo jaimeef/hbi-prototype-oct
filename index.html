@@ -98,17 +98,18 @@
         </container>
 
     </section>
+    
+    <hr class="solid">
 
     <section id="volume">
 
         <table>
-
-            <tr>
+<tr>
                 <td>
-                    <p>Prostate volume:</p>
+                    <p><strong>Prostate volume: </strong></p>
                 </td>
                 <td>
-                    <p>26.4cc</p>
+                    <p>26.3 cc</p>
                 </td>
 
             </tr>
@@ -116,6 +117,8 @@
         </table>
 
     </section>
+    
+    <hr class="solid">
 
 
     <section class="slideshow-container">
@@ -362,7 +365,7 @@
             materialLabels = modelViewer.model.getMaterialByName("Text");
             materialLabels.setAlphaMode("BLEND");
             // Default to base colour
-             materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.10, 0, 0.8, 0.5]);
+            materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.10, 0, 0.8, 0.5]);
             // Adds slider interactivity
             document.querySelector('#alpha-four').addEventListener('input', (event) => {
                 materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.10, 0, 0.8, (event.target.value)]);

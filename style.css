@@ -10,11 +10,14 @@ model-viewer {
     width: auto;
     height: 500px;
     margin: 0 auto;
+    background: #FFDDD7;
 
 }
 
 body {
     font-family: 'lato', 'sans-serif';
+    background: #002864;
+    color: #FFFFFF;
 
 }
 
@@ -66,19 +69,15 @@ h3 {
     background: #002864;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
-    color: #FFFFFF;
+
     font-size: 19px;
 }
 
 #transparency {
     background: #002864;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
-    margin-bottom: 1.5rem;
+    border-radius: 5px;
     color: #FFFFFF;
-    padding-bottom: 1rem;
+
     padding-top: 2rem;
 
 }
@@ -90,22 +89,23 @@ h3 {
 }
 
 #volume {
-    color: #000000;
-    font-size: 16px;
-    padding-left: 1.5rem;
 
+    font-size: 16px;
+    padding: 2rem;
+    background: #002864
 }
 
 .slideshow-container {
     max-width: 1000px;
     background: black;
     position: relative;
-    margin: auto;
     margin-top: 1.5rem;
     display: flex;
     justify-content: center;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .mySlides {
@@ -122,7 +122,7 @@ h3 {
     color: white;
     font-weight: bold;
     font-size: 18px;
-/*    transition: 0.6s ease;*/
+    /*    transition: 0.6s ease;*/
     user-select: none;
 }
 
@@ -197,3 +197,9 @@ h3 {
     }
 }
 */
+
+.solid {
+    
+    border-top: 0px solid #FFF;
+    margin: 1rem;
+}
