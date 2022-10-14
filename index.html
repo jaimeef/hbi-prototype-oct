@@ -26,33 +26,34 @@
         <item id="right-item">
             <p><strong>URN:</strong> 123456</p>
             <p><strong>Patient Name:</strong> John Doe</p>
-            <p><strong>Date of creation:</strong> 31.08.22</p>
+            <p><strong>Date of model:</strong> 31.08.22</p>
         </item>
     </header>
 
 
-    <model-viewer id="prostateModel" shadow-intensity="1" src="Assets/labelled_Oct10v2.glb" camera-controls ar ios-src="Assets/labelled_Oct10.usdz">
+    <model-viewer id="prostateModel" shadow-intensity="1" src="Assets/labelled_Oct10v3.glb" camera-controls ar ios-src="Assets/labelled_Oct10v3.usdz">
 
 
 
-
-
+<section id="position">
+            <button class=position-button data-orbit="356deg 79.43deg auto">Reset view</button>
+ </section>
     </model-viewer>
 
-    <!--    <section id="position">
+        
         <div class=position-controls>
 
-            <button class=position-button data-orbit="107.6deg 87.73deg auto">Posterior</button>
-            <button class=position-button data-orbit="-88.51deg 87.52deg auto">Anterior</button>
+<!--            <button class=position-button data-orbit="107.6deg 87.73deg auto">Posterior</button>-->
+<!--            <button class=position-button data-orbit="174.2deg 93.03deg auto">Anterior</button>-->
 
         </div>
 
-        <div class=position-controls>
+   <!--     <div class=position-controls>
             <button class=position-button data-orbit="94.81deg 22.5deg auto">Base</button>
             <button class=position-button data-orbit="90.3deg 157.5deg auto">Apex</button>
-        </div>
+        </div>-->
 
-    </section>-->
+   
 
     <section id="labels">
 
@@ -309,7 +310,7 @@
 
     <script type="module">
         const modelViewer = document.querySelector("#prostateModel");
-        /* const annotationClicked = (annotation) => {
+         const annotationClicked = (annotation) => {
              let dataset = annotation.dataset;
              modelViewer.cameraTarget = dataset.target;
              modelViewer.cameraOrbit = dataset.orbit;
@@ -318,7 +319,7 @@
          const buttonSection = document.querySelector("#position")
          buttonSection.querySelectorAll('button').forEach((hotspot) => {
              hotspot.addEventListener('click', () => annotationClicked(hotspot));
-         });*/
+         });
 
 
 
@@ -365,10 +366,10 @@
             materialLabels = modelViewer.model.getMaterialByName("Text");
             materialLabels.setAlphaMode("BLEND");
             // Default to base colour
-            materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.10, 0, 0.8, 0.5]);
+           materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.5, 0.1, 0.8, 0.5]);
             // Adds slider interactivity
             document.querySelector('#alpha-four').addEventListener('input', (event) => {
-                materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.10, 0, 0.8, (event.target.value)]);
+                materialLabels.pbrMetallicRoughness.setBaseColorFactor([0.5, 0.1, 0.8, (event.target.value)]);
 
             });
         })
